@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\ApplicationCore.LimitRate\ApplicationCore.LimitRate.csproj" />
+	  <ProjectReference Include="..\..\Application\Startup\ConfigService\ConfigService\ConfigServiceTest.csproj" />
+	  <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="ConfigMap.json" Link="ConfigMap.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="RequestConfig.json" Link="RequestConfig.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>
